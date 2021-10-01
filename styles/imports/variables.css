@@ -1,0 +1,14 @@
+:root {
+  /*------COLOUR VARIABLES-------*/
+  --dark-font-color: #0d0000;
+  --light-font-color: #ffffff;
+  --color-1: #61ccd9;
+  --color-2: #90aa7a;
+  --color-3: #eca33b;
+  --rain-color: #f9f4ed;
+  --museum-color: #e3f7ff;
+  --bug-color: #e5f8e6;
+  /*------COLOUR VARIABLES-------*/
+  --heading-font: "Koh Santepheap", cursive;
+  --paragraph-font: "Open Sans", sans-serif;
+}

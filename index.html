@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Sophie Haugland displaying most recent updates to previous submissions and examination sites. Including what I changed and why."
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/media-queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;400;700&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio SophHP</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Portfolio SophHP</h1>
+      <section class="project-section project-one">
+        <h2>Project 1</h2>
+        <a class="project-link" href="rainydays/" target="_blank"
+          >Cross course project - Rainy Days
+          <div class="product-preview">
+            <img src="images/mac-rain.png" alt="" />
+            <img src="images/rain-ipad.png" alt="" />
+            <img src="images/rain.png" alt="" />
+          </div>
+        </a>
+        <div class="information_container">
+          <div class="buttons_container">
+            <h3>What I changed</h3>
+            <button class="proj-1_change-button change-button selected" id="">Buttons</button>
+            <button class="proj-1_change-button change-button" id="">Scroll Behaviour</button>
+            <button class="proj-1_change-button change-button" id="">Semantics</button>
+            <button class="proj-1_change-button change-button" id="">Contact Form</button>
+            <button class="proj-1_change-button change-button" id="">Form Validation</button>
+            <button class="proj-1_change-button change-button" id="">Search</button>
+            <button class="proj-1_change-button change-button" id="">Picture Modal</button>
+            <button class="proj-1_change-button change-button" id="">Exhibitions</button>
+            <button class="proj-1_change-button change-button" id="">WCAG Check</button>
+          </div>
+
+          <ul class="list_container">
+            <li class="proj-1_info-element visible">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The buttons had an on hover effect that lifted the button upwards by 10px. This
+                  caused a flickering effect if you hovered over the bottom of the button.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I changed the transform property from translatey() to use scale(). This removed
+                  the flickering effect but still left the appearance of the button lifting off the
+                  page.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some pages had links to take you to various sections of the page. The page hopped
+                  instantly to the new place on the page, it wasn't very comfortable on the eyes.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added a scroll-behaviour smooth to the whole document so the users can move from
+                  place to place on a page in a more pleasant manner.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some of the elements on the site were not very semantic. For example I had a div
+                  inside a label element to create the hanburger menu. There were also a number of
+                  checkbox hacks used to create menus and search areas. This was not ideal
+                  especially for people using assistive technology.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  When I originally coded this site I used purely HTML and CSS. By adding JavaScript
+                  I was able to remove the need for checkbox hacks. This eliminated the problem of
+                  nesting div elements inside a label. I created a menu button element that added
+                  and removed class names to the menu.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The contact form didn't work, it didn't send the information anywhere, it was just
+                  a hard coded link to a mock confirmation page. I wanted to be able to send emails
+                  from there.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I created a headless WordPress installation, added the
+                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
+                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
+                  the information from the contact form to the backend. I also added a small message
+                  to tell the user when the message was being sent as there was a small delay from
+                  pressing send to recieving the confirmation from the backend. After recueving
+                  response.ok from the server the sending message was removed and replaced with a
+                  message sent confirmation.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  As I now had a form that was able to send I wanted to be able to validate the user
+                  inputs before sending the information to make sure it was all correct.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Using JavaScript I was able to create form validation that checked the user input.
+                  I created an event listener on focusout to tell the user imediatly if there was an
+                  error. This allowd them to fill in the form more easily as they could correct
+                  mistakes as they went through.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  There was a search input in the header of every page but it didn't have any
+                  functionality. To make this a useful feature I needed to make it work properly
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added the exhibitions to the WordPress database so I could then very easily use
+                  the search endpoint from the WordPress API to display exhibitions matching the
+                  user input. To do this I created a function that added the users search as a query
+                  string. This then redirected the user to the exhibitions page. I took the query
+                  string and used this in the search endpoint to collect all exhibitions that
+                  matched the users search.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The pictures in the exhibitions page were static I thought it would be nice if
+                  users could click on the images to see them full screen.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I selected all the images on the page with .querySelectorAll(). I then used
+                  forEach() to add an event listener to each of the images. I added a class that
+                  would allow me to style the images to be full screen using CSS. I also added a
+                  small close button so it was clear to users how to close the modal.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>To make the exhibitions easily editable and searchable.</p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Instead oh hard coding all the exhibitions in the HTML I populated them from the
+                  WordPress API. This not only helped with the search function but it also means if
+                  exhibitions needded updating or changing this could easily be done, without
+                  needing to add any extra code.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  I found that some of the buttons lacked enough contrast to pass WCAG accessibility
+                  tests. There were also a number of images without alt text, or with not very
+                  useful alt text. I changed this to make the site more accessible to all different
+                  types of user.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I checked through all images and ensured there was a descriptive alt text. I also
+                  checked that all buttons and links had appropriate text and aria-labels where
+                  necessary. I also thoroughly checked the contrast of the different elements on the
+                  site to ensure they would be readable for everyone.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-section project-two">
+        <h2>Project 2</h2>
+        <a
+          class="project-link"
+          href="https://semester-project-1-arctic-museum.netlify.app/"
+          target="_blank"
+          >Semester project 1 - Science Museum
+          <div class="product-preview">
+            <img src="images/mac-museum.png" alt="" />
+            <img src="images/museum-ipad.png" alt="" />
+            <img src="images/museum.png" alt="" />
+          </div>
+        </a>
+        <div class="information_container">
+          <div class="buttons_container">
+            <h3>What I changed</h3>
+            <button class="proj-2_change-button change-button selected" id="">Buttons</button>
+            <button class="proj-2_change-button change-button" id="">Scroll Behaviour</button>
+            <button class="proj-2_change-button change-button" id="">Semantics</button>
+            <button class="proj-2_change-button change-button" id="">Contact Form</button>
+            <button class="proj-2_change-button change-button" id="">Form Validation</button>
+            <button class="proj-2_change-button change-button" id="">Search</button>
+            <button class="proj-2_change-button change-button" id="">Picture Modal</button>
+            <button class="proj-2_change-button change-button" id="">Exhibitions</button>
+            <button class="proj-2_change-button change-button" id="">WCAG Check</button>
+          </div>
+
+          <ul class="list_container">
+            <li class="proj-2_info-element visible">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The buttons had an on hover effect that lifted the button upwards by 10px. This
+                  caused a flickering effect if you hovered over the bottom of the button.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I changed the transform property from translatey() to use scale(). This removed
+                  the flickering effect but still left the appearance of the button lifting off the
+                  page.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some pages had links to take you to various sections of the page. The page hopped
+                  instantly to the new place on the page, it wasn't very comfortable on the eyes.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added a scroll-behaviour smooth to the whole document so the users can move from
+                  place to place on a page in a more pleasant manner.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some of the elements on the site were not very semantic. For example I had a div
+                  inside a label element to create the hanburger menu. There were also a number of
+                  checkbox hacks used to create menus and search areas. This was not ideal
+                  especially for people using assistive technology.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  When I originally coded this site I used purely HTML and CSS. By adding JavaScript
+                  I was able to remove the need for checkbox hacks. This eliminated the problem of
+                  nesting div elements inside a label. I created a menu button element that added
+                  and removed class names to the menu.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The contact form didn't work, it didn't send the information anywhere, it was just
+                  a hard coded link to a mock confirmation page. I wanted to be able to send emails
+                  from there.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I created a headless WordPress installation, added the
+                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
+                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
+                  the information from the contact form to the backend. I also added a small message
+                  to tell the user when the message was being sent as there was a small delay from
+                  pressing send to recieving the confirmation from the backend. After recueving
+                  response.ok from the server the sending message was removed and replaced with a
+                  message sent confirmation.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  As I now had a form that was able to send I wanted to be able to validate the user
+                  inputs before sending the information to make sure it was all correct.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Using JavaScript I was able to create form validation that checked the user input.
+                  I created an event listener on focusout to tell the user imediatly if there was an
+                  error. This allowd them to fill in the form more easily as they could correct
+                  mistakes as they went through.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  There was a search input in the header of every page but it didn't have any
+                  functionality. To make this a useful feature I needed to make it work properly
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added the exhibitions to the WordPress database so I could then very easily use
+                  the search endpoint from the WordPress API to display exhibitions matching the
+                  user input. To do this I created a function that added the users search as a query
+                  string. This then redirected the user to the exhibitions page. I took the query
+                  string and used this in the search endpoint to collect all exhibitions that
+                  matched the users search.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The pictures in the exhibitions page were static I thought it would be nice if
+                  users could click on the images to see them full screen.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I selected all the images on the page with .querySelectorAll(). I then used
+                  forEach() to add an event listener to each of the images. I added a class that
+                  would allow me to style the images to be full screen using CSS. I also added a
+                  small close button so it was clear to users how to close the modal.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>To make the exhibitions easily editable and searchable.</p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Instead oh hard coding all the exhibitions in the HTML I populated them from the
+                  WordPress API. This not only helped with the search function but it also means if
+                  exhibitions needded updating or changing this could easily be done, without
+                  needing to add any extra code.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-2_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  I found that some of the buttons lacked enough contrast to pass WCAG accessibility
+                  tests. There were also a number of images without alt text, or with not very
+                  useful alt text. I changed this to make the site more accessible to all different
+                  types of user.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I checked through all images and ensured there was a descriptive alt text. I also
+                  checked that all buttons and links had appropriate text and aria-labels where
+                  necessary. I also thoroughly checked the contrast of the different elements on the
+                  site to ensure they would be readable for everyone.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-2_close-button">Close</button>
+                <button class="proj-2_next-button">Next</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-section project-three">
+        <h2>Project 3</h2>
+        <a class="project-link" href="bug-blog/" target="_blank">
+          Exam 1 - Bug Blog
+          <div class="product-preview">
+            <img src="images/mac-bug.png" alt="" />
+            <img src="images/bug-ipad.png" alt="" />
+            <img src="images/bug-blog.png" alt="" />
+          </div>
+        </a>
+        <div class="information_container">
+          <div class="buttons_container">
+            <h3>What I changed</h3>
+            <button class="proj-3_change-button change-button selected" id="">Buttons</button>
+            <button class="proj-3_change-button change-button" id="">Scroll Behaviour</button>
+            <button class="proj-3_change-button change-button" id="">Semantics</button>
+            <button class="proj-3_change-button change-button" id="">Contact Form</button>
+            <button class="proj-3_change-button change-button" id="">Form Validation</button>
+            <button class="proj-3_change-button change-button" id="">Search</button>
+            <button class="proj-3_change-button change-button" id="">Picture Modal</button>
+            <button class="proj-3_change-button change-button" id="">Exhibitions</button>
+            <button class="proj-3_change-button change-button" id="">WCAG Check</button>
+          </div>
+
+          <ul class="list_container">
+            <li class="proj-3_info-element visible">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The buttons had an on hover effect that lifted the button upwards by 10px. This
+                  caused a flickering effect if you hovered over the bottom of the button.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I changed the transform property from translatey() to use scale(). This removed
+                  the flickering effect but still left the appearance of the button lifting off the
+                  page.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some pages had links to take you to various sections of the page. The page hopped
+                  instantly to the new place on the page, it wasn't very comfortable on the eyes.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added a scroll-behaviour smooth to the whole document so the users can move from
+                  place to place on a page in a more pleasant manner.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  Some of the elements on the site were not very semantic. For example I had a div
+                  inside a label element to create the hanburger menu. There were also a number of
+                  checkbox hacks used to create menus and search areas. This was not ideal
+                  especially for people using assistive technology.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  When I originally coded this site I used purely HTML and CSS. By adding JavaScript
+                  I was able to remove the need for checkbox hacks. This eliminated the problem of
+                  nesting div elements inside a label. I created a menu button element that added
+                  and removed class names to the menu.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The contact form didn't work, it didn't send the information anywhere, it was just
+                  a hard coded link to a mock confirmation page. I wanted to be able to send emails
+                  from there.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I created a headless WordPress installation, added the
+                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
+                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
+                  the information from the contact form to the backend. I also added a small message
+                  to tell the user when the message was being sent as there was a small delay from
+                  pressing send to recieving the confirmation from the backend. After recueving
+                  response.ok from the server the sending message was removed and replaced with a
+                  message sent confirmation.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  As I now had a form that was able to send I wanted to be able to validate the user
+                  inputs before sending the information to make sure it was all correct.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Using JavaScript I was able to create form validation that checked the user input.
+                  I created an event listener on focusout to tell the user imediatly if there was an
+                  error. This allowd them to fill in the form more easily as they could correct
+                  mistakes as they went through.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  There was a search input in the header of every page but it didn't have any
+                  functionality. To make this a useful feature I needed to make it work properly
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I added the exhibitions to the WordPress database so I could then very easily use
+                  the search endpoint from the WordPress API to display exhibitions matching the
+                  user input. To do this I created a function that added the users search as a query
+                  string. This then redirected the user to the exhibitions page. I took the query
+                  string and used this in the search endpoint to collect all exhibitions that
+                  matched the users search.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  The pictures in the exhibitions page were static I thought it would be nice if
+                  users could click on the images to see them full screen.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I selected all the images on the page with .querySelectorAll(). I then used
+                  forEach() to add an event listener to each of the images. I added a class that
+                  would allow me to style the images to be full screen using CSS. I also added a
+                  small close button so it was clear to users how to close the modal.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>To make the exhibitions easily editable and searchable.</p>
+                <h4>How I changed it:</h4>
+                <p>
+                  Instead oh hard coding all the exhibitions in the HTML I populated them from the
+                  WordPress API. This not only helped with the search function but it also means if
+                  exhibitions needded updating or changing this could easily be done, without
+                  needing to add any extra code.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  I found that some of the buttons lacked enough contrast to pass WCAG accessibility
+                  tests. There were also a number of images without alt text, or with not very
+                  useful alt text. I changed this to make the site more accessible to all different
+                  types of user.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I checked through all images and ensured there was a descriptive alt text. I also
+                  checked that all buttons and links had appropriate text and aria-labels where
+                  necessary. I also thoroughly checked the contrast of the different elements on the
+                  site to ensure they would be readable for everyone.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

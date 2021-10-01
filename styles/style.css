@@ -1,0 +1,164 @@
+@import "imports/variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+}
+
+a {
+  color: var(--dark-font-color);
+}
+
+.project-link {
+  font-family: var(--heading-font);
+  color: var(--link-font-color);
+  text-decoration: none;
+}
+
+.product-preview {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  align-items: end;
+  justify-items: center;
+  padding: 20px 20px 0px 20px;
+}
+
+.information_container {
+  display: grid;
+}
+
+.project-section {
+  padding: 20px;
+}
+
+.project-one {
+  background-color: var(--rain-color);
+}
+
+.project-two {
+  background-color: var(--museum-color);
+}
+
+.project-three {
+  background-color: var(--bug-color);
+}
+.product-preview img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.buttons_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  flex-wrap: wrap
+}
+
+.buttons_container h3 {
+  grid-column: 1/-1;
+}
+
+.change-button {
+  position: relative;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px 10px 10px 0px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+  background-color: var(--light-font-color);
+  z-index: 1;
+}
+
+.change-button::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  width: 6px;
+  height: 100%;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: -1;
+}
+
+.change-button.selected::after,
+.change-button:hover::after {
+  height: 6px;
+  width: 100%;
+}
+
+.change-button.selected,
+.change-button:hover {
+  border-radius: 10px 10px 0px 0px;
+}
+
+
+.proj-1_change-button.change-button.selected::after,
+.proj-1_change-button.change-button:hover::after {
+  background-color: var(--color-3);
+}
+
+.proj-1_change-button.change-button::after {
+  background-color: var(--color-3);
+}
+
+.proj-2_change-button.change-button.selected::after,
+.proj-2_change-button.change-button:hover::after {
+  background-color: var(--color-1);
+}
+
+.proj-2_change-button.change-button::after {
+  background-color: var(--color-1);
+}
+.proj-3_change-button.change-button.selected::after,
+.proj-3_change-button.change-button:hover::after {
+  background-color: var(--color-2);
+}
+
+.proj-3_change-button.change-button::after {
+  background-color: var(--color-2);
+}
+
+.list_container {
+  min-height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.information_container li {
+  list-style: none;
+  position: absolute;
+  max-width: 500px;
+  top: 100%;
+  opacity: 0;
+  transition: top .75s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: var(--light-font-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.information_container li.visible.open {
+  position: fixed;
+  height: 90vh;
+  width: 90vw;
+  top: 5vh;
+  left: 5vw;
+  opacity: 1;
+  z-index: 100;
+}
+
+
+.modal-button-container {
+  display: flex;
+  justify-content: space-around;
+}
