@@ -1,25 +1,40 @@
-
 @media (min-width: 600px) {
-.buttons_container {
+  .buttons_container {
     display: grid;
+    padding-right: 0px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
-  
+
+  .project-section {
+    padding: 20px;
+  }
+
+  .list_container {
+    margin: 0px;
+    min-height: 560px;
+    margin: 10px;
+  }
+
+  .information_container li {
+    opacity: 0;
+  }
+
   .information_container li.visible {
     top: 0%;
     opacity: 1;
+    max-width: 100%;
+    min-width: 480px;
+    height: max-content;
   }
 
-  .proj-1_close-button, 
+  .proj-1_close-button,
   .proj-2_close-button,
   .proj-3_close-button {
-      display: none;
+    display: none;
   }
-  
 }
-
 
 @media (min-width: 750px) {
   .information_container {
@@ -32,6 +47,10 @@
     width: 200px;
   }
 
+  .change-button.selected {
+    margin: 10px 0px 10px 0px;
+  }
+
   .information_container li {
     list-style: none;
     position: absolute;
@@ -39,17 +58,15 @@
     top: 10%;
     left: 100%;
     opacity: 0;
-    transition: left .75s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: left 0.75s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: var(--light-font-color);
-    padding: 20px;
+    padding: 5px 20px;
     border-radius: 10px;
   }
-  
+
   .information_container li.visible {
-    left: 10%;
+    left: 5%;
     top: 10%;
     opacity: 1;
   }
 }
-
-

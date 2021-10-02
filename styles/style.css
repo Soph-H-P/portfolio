@@ -37,7 +37,7 @@ a {
 }
 
 .project-section {
-  padding: 20px;
+  padding: 0px;
 }
 
 .project-one {
@@ -58,9 +58,10 @@ a {
 
 .buttons_container {
   display: grid;
+  padding-right: 20%;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .buttons_container h3 {
@@ -71,7 +72,7 @@ a {
   position: relative;
   font-size: 1rem;
   padding: 10px;
-  margin: 10px 10px 10px 0px;
+  margin: 10px 20px 10px 0px;
   border: none;
   border-radius: 0px 10px 10px 0px;
   overflow: hidden;
@@ -102,7 +103,6 @@ a {
   border-radius: 10px 10px 0px 0px;
 }
 
-
 .proj-1_change-button.change-button.selected::after,
 .proj-1_change-button.change-button:hover::after {
   background-color: var(--color-3);
@@ -130,35 +130,95 @@ a {
 }
 
 .list_container {
-  min-height: 500px;
+  margin: -700px 0px -110px 0px;
   overflow: hidden;
   position: relative;
 }
 
 .information_container li {
+  overflow: scroll;
   list-style: none;
   position: absolute;
-  max-width: 500px;
+  width: 90%;
   top: 100%;
   opacity: 0;
-  transition: top .75s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: var(--light-font-color);
-  padding: 20px;
+  padding: 30px 15px;
   border-radius: 10px;
-}
-
-.information_container li.visible.open {
-  position: fixed;
-  height: 90vh;
-  width: 90vw;
-  top: 5vh;
-  left: 5vw;
-  opacity: 1;
   z-index: 100;
 }
 
+.information_container li.open {
+  width: 100%;
+  max-height: 500px;
+  opacity: 1;
+  top: 25%;
+  left: 0px;
+  margin: 0;
+}
 
 .modal-button-container {
   display: flex;
   justify-content: space-around;
+}
+
+.proj-1_next-button::after,
+.proj-2_next-button::after,
+.proj-3_next-button::after,
+.proj-1_close-button::after,
+.proj-2_close-button::after,
+.proj-3_close-button::after {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.proj-1_next-button::after,
+.proj-2_next-button::after,
+.proj-3_next-button::after {
+  content: "👉";
+}
+
+.proj-1_close-button::after,
+.proj-2_close-button::after,
+.proj-3_close-button::after {
+  content: "🙅";
+}
+
+.proj-1_next-button,
+.proj-2_next-button,
+.proj-3_next-button,
+.proj-1_close-button,
+.proj-2_close-button,
+.proj-3_close-button {
+  background: none;
+  padding: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.proj-1_next-button:hover,
+.proj-2_next-button:hover,
+.proj-3_next-button:hover,
+.proj-1_close-button:hover,
+.proj-2_close-button:hover,
+.proj-3_close-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.proj-1_next-button,
+.proj-1_close-button {
+  border: solid 2px var(--color-3);
+}
+
+.proj-2_next-button,
+.proj-2_close-button {
+  border: solid 2px var(--color-1);
+}
+
+.proj-3_close-button,
+.proj-3_next-button {
+  border: solid 2px var(--color-2);
 }

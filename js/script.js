@@ -14,19 +14,17 @@ let width = window.innerWidth;
 
 const checkPageWidth = () => {
   if (width <= 600) {
-    projOneButtons[0].classList.remove("selected");
-    projTwoButtons[0].classList.remove("selected");
-    projThreeButtons[0].classList.remove("selected");
-  } else {
-    if (!projOneButtons[0].classList.contains("selected")) {
-      projOneButtons[0].classList.add("selected");
-      projTwoButtons[0].classList.add("selected");
-      projThreeButtons[0].classList.add("selected");
-      projOneInfoElements[0].classList.add("visible");
-      projTwoInfoElements[0].classList.add("visible");
-      projThreeInfoElements[0].classList.add("visible");
-    }
-  }
+    projOneButtons.forEach(button => {
+        button.classList.remove("selected");
+    })
+    projTwoButtons.forEach(button => {
+        button.classList.remove("selected");
+    })
+    projThreeButtons.forEach(button => {
+        button.classList.remove("selected");
+    })
+   
+  } 
 };
 
 checkPageWidth();
@@ -39,30 +37,23 @@ window.addEventListener("resize", (e) => {
 const addEventListenersToChangesViewer = (projButtons, infoElements, closeButtons, nextButtons) => {
   projButtons.forEach((projButton, buttonIndex) => {
     projButton.addEventListener("click", (e) => {
-      console.log("CLICK");
       projButtons.forEach((button, index) => {
         if (button.classList.contains("selected")) {
           button.classList.remove("selected");
-          console.log("one");
         }
         if (
           infoElements[index].classList.contains("visible") &&
           !button.classList.contains("selected")
         ) {
           infoElements[index].classList.remove("visible");
-          console.log("two");
           if (width <= 600) {
             infoElements[index].classList.remove("open");
-            console.log("three");
           }
         }
       });
       infoElements[buttonIndex].classList.add("visible");
-      console.log("four");
       projButton.classList.add("selected");
-      console.log("five");
       if (width <= 600) {
-        console.log("six");
         infoElements[buttonIndex].classList.add("open");
       }
     });
@@ -73,10 +64,10 @@ const addEventListenersToChangesViewer = (projButtons, infoElements, closeButton
       const currentSelectedButton = projButtons[closeButtonIndex];
       const currentInfoElement = infoElements[closeButtonIndex];
       currentInfoElement.classList.remove("visible");
+      currentSelectedButton.classList.remove("selected");
       if (width <= 600) {
         currentInfoElement.classList.remove("open");
       }
-      currentSelectedButton.classList.remove("selected");
     });
   });
 
