@@ -36,13 +36,12 @@
           <div class="buttons_container">
             <h3>What I changed</h3>
             <button class="proj-1_change-button change-button selected" id="">Buttons</button>
-            <button class="proj-1_change-button change-button" id="">Scroll Behaviour</button>
-            <button class="proj-1_change-button change-button" id="">Semantics</button>
+            <button class="proj-1_change-button change-button" id="">Loading Indicator</button>
             <button class="proj-1_change-button change-button" id="">Contact Form</button>
-            <button class="proj-1_change-button change-button" id="">Form Validation</button>
+            <button class="proj-1_change-button change-button" id="">Favicon</button>
             <button class="proj-1_change-button change-button" id="">Search</button>
             <button class="proj-1_change-button change-button" id="">Picture Modal</button>
-            <button class="proj-1_change-button change-button" id="">Exhibitions</button>
+            <button class="proj-1_change-button change-button" id="">Cart Functionality</button>
             <button class="proj-1_change-button change-button" id="">WCAG Check</button>
           </div>
 
@@ -51,14 +50,13 @@
               <div>
                 <h4>Why I changed it:</h4>
                 <p>
-                  The buttons had an on hover effect that lifted the button upwards by 10px. This
-                  caused a flickering effect if you hovered over the bottom of the button.
+                  On Chrome browsers the text inside the buttons were not centered. It was a
+                  necessry visual and UI improvement.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I changed the transform property from translatey() to use scale(). This removed
-                  the flickering effect but still left the appearance of the button lifting off the
-                  page.
+                  Instead of using text align center I used align content center which solved the
+                  problem.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -71,36 +69,14 @@
               <div>
                 <h4>Why I changed it:</h4>
                 <p>
-                  Some pages had links to take you to various sections of the page. The page hopped
-                  instantly to the new place on the page, it wasn't very comfortable on the eyes.
+                  When loading the products on the product page, there was no loading indicator.
+                  This meant that users didn't know if there were no products to show or if they
+                  were just waiting for products to load.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I added a scroll-behaviour smooth to the whole document so the users can move from
-                  place to place on a page in a more pleasant manner.
-                </p>
-              </div>
-              <div class="modal-button-container">
-                <button class="proj-1_close-button">Close</button>
-                <button class="proj-1_next-button">Next</button>
-              </div>
-            </li>
-
-            <li class="proj-1_info-element">
-              <div>
-                <h4>Why I changed it:</h4>
-                <p>
-                  Some of the elements on the site were not very semantic. For example I had a div
-                  inside a label element to create the hanburger menu. There were also a number of
-                  checkbox hacks used to create menus and search areas. This was not ideal
-                  especially for people using assistive technology.
-                </p>
-                <h4>How I changed it:</h4>
-                <p>
-                  When I originally coded this site I used purely HTML and CSS. By adding JavaScript
-                  I was able to remove the need for checkbox hacks. This eliminated the problem of
-                  nesting div elements inside a label. I created a menu button element that added
-                  and removed class names to the menu.
+                  In the fetch function for the products page, I added a small loading indicator
+                  which was removed after the request had been completed.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -124,7 +100,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After recueving
+                  pressing send to recieving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
@@ -139,15 +115,14 @@
               <div>
                 <h4>Why I changed it:</h4>
                 <p>
-                  As I now had a form that was able to send I wanted to be able to validate the user
-                  inputs before sending the information to make sure it was all correct.
+                  The website did not have a favicon visible at the tops of the pages. It is a nice
+                  branding thing to have and is good for users to quickly recognise which tab they
+                  are looking for.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  Using JavaScript I was able to create form validation that checked the user input.
-                  I created an event listener on focusout to tell the user imediatly if there was an
-                  error. This allowd them to fill in the form more easily as they could correct
-                  mistakes as they went through.
+                  I linked the favicon at the top of each html page giving it rel and type
+                  attributes so the browser would know this was the icon to show in the tab.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -161,16 +136,18 @@
                 <h4>Why I changed it:</h4>
                 <p>
                   There was a search input in the header of every page but it didn't have any
-                  functionality. To make this a useful feature I needed to make it work properly
+                  functionality. To make this a useful feature I needed to make it work properly. To
+                  open and close the search there was a checkbox hack whick is not very semantic.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I added the exhibitions to the WordPress database so I could then very easily use
-                  the search endpoint from the WordPress API to display exhibitions matching the
-                  user input. To do this I created a function that added the users search as a query
-                  string. This then redirected the user to the exhibitions page. I took the query
-                  string and used this in the search endpoint to collect all exhibitions that
-                  matched the users search.
+                  Using the WooCommerce API endpoint for products, and adding a search query I was
+                  able to display products matching the user input. To do this I created a function
+                  that added the users search as a query string. This then redirected the user to
+                  the search results page. I took the query string and used this in the search
+                  endpoint to collect all products that matched the users search. To solve the
+                  checkbox hack, I simply added and removed an "open" class on click and styled this
+                  using css.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -203,7 +180,7 @@
             <li class="proj-1_info-element">
               <div>
                 <h4>Why I changed it:</h4>
-                <p>To make the exhibitions easily editable and searchable.</p>
+                <p>To allow the user to remove items from the cart before checkout.</p>
                 <h4>How I changed it:</h4>
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
@@ -347,7 +324,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After recueving
+                  pressing send to recieving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
@@ -568,7 +545,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After recueving
+                  pressing send to recieving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
