@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;400;700&family=Open+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <title>Portfolio SophHP</title>
   </head>
   <body>
@@ -40,9 +41,10 @@
             <button class="proj-1_change-button change-button" id="">Contact Form</button>
             <button class="proj-1_change-button change-button" id="">Favicon</button>
             <button class="proj-1_change-button change-button" id="">Search</button>
-            <button class="proj-1_change-button change-button" id="">Picture Modal</button>
+            <button class="proj-1_change-button change-button" id="">Product Zoom</button>
             <button class="proj-1_change-button change-button" id="">Cart Functionality</button>
-            <button class="proj-1_change-button change-button" id="">WCAG Check</button>
+            <button class="proj-1_change-button change-button" id="">Products Page</button>
+            <button class="proj-1_change-button change-button" id="">Check-box Hacks</button>
           </div>
 
           <ul class="list_container">
@@ -51,7 +53,7 @@
                 <h4>Why I changed it:</h4>
                 <p>
                   On Chrome browsers the text inside the buttons were not centered. It was a
-                  necessry visual and UI improvement.
+                  necessary visual and UI improvement.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
@@ -76,7 +78,10 @@
                 <h4>How I changed it:</h4>
                 <p>
                   In the fetch function for the products page, I added a small loading indicator
-                  which was removed after the request had been completed.
+                  which was removed after the request had been completed. As the site is called
+                  rainy days I created a loader that looked like rain drops falling. I used purely
+                  CSS to animate the drops. I created one animation and gave each raindrop a
+                  different time frame making them look like they are dropping at random.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -100,7 +105,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After receiving
+                  pressing send to receiving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
@@ -121,7 +126,7 @@
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I linked the favicon at the top of each html page giving it rel and type
+                  I linked the favicon at the top of each HTML page giving it rel and type
                   attributes so the browser would know this was the icon to show in the tab.
                 </p>
               </div>
@@ -136,8 +141,7 @@
                 <h4>Why I changed it:</h4>
                 <p>
                   There was a search input in the header of every page but it didn't have any
-                  functionality. To make this a useful feature I needed to make it work properly. To
-                  open and close the search there was a checkbox hack whick is not very semantic.
+                  functionality. To make this a useful feature I needed to make it work properly.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
@@ -145,9 +149,7 @@
                   able to display products matching the user input. To do this I created a function
                   that added the users search as a query string. This then redirected the user to
                   the search results page. I took the query string and used this in the search
-                  endpoint to collect all products that matched the users search. To solve the
-                  checkbox hack, I simply added and removed an "open" class on click and styled this
-                  using css.
+                  endpoint to collect all products that matched the users search.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -185,8 +187,8 @@
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
                   WordPress API. This not only helped with the search function but it also means if
-                  exhibitions needded updating or changing this could easily be done, without
-                  needing to add any extra code.
+                  exhibitions needed updating or changing this could easily be done, without needing
+                  to add any extra code.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -198,17 +200,41 @@
               <div>
                 <h4>Why I changed it:</h4>
                 <p>
-                  I found that some of the buttons lacked enough contrast to pass WCAG accessibility
-                  tests. There were also a number of images without alt text, or with not very
-                  useful alt text. I changed this to make the site more accessible to all different
-                  types of user.
+                  I originally had one page for mens and womens that linked to the same JavaScript
+                  file and was a copy of all the same HTML. As you could filter gender on both the
+                  pages anyway, the extra page was redundant. It could also get confusing when the
+                  title of the page was stating womens jackets and you had filtered to only show
+                  mens jackets.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I checked through all images and ensured there was a descriptive alt text. I also
-                  checked that all buttons and links had appropriate text and aria-labels where
-                  necessary. I also thoroughly checked the contrast of the different elements on the
-                  site to ensure they would be readable for everyone.
+                  I removed both the pages and made one page for "Jackets" instead. This gives the
+                  ability to see mens or womens items using the filter. I then changed all the
+                  links, titles and breadcrumb links accordingly. I then added query strings when a
+                  user clicked on the mens or womens buttons on the home page. I used this to then
+                  either check the correct filters and changed the page title to specify the gender
+                  selected.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-1_close-button">Close</button>
+                <button class="proj-1_next-button">Next</button>
+              </div>
+            </li>
+            <li class="proj-1_info-element">
+              <div>
+                <h4>Why I changed it:</h4>
+                <p>
+                  When the site was first made it was purely HTML and CSS. To make the menu, search
+                  and basket open and close I originally used the checkbox hack. As this is not
+                  really an ideal way to achieve this effect, semantically or for accessibility, it
+                  needed to be changed.
+                </p>
+                <h4>How I changed it:</h4>
+                <p>
+                  I removed all the checkbox hacks from the site and replaced the functionality with
+                  a small amount of JavaScript. Adding and removing a specific class that is styled
+                  accordingly.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -291,7 +317,7 @@
                 <h4>Why I changed it:</h4>
                 <p>
                   Some of the elements on the site were not very semantic. For example I had a div
-                  inside a label element to create the hanburger menu. There were also a number of
+                  inside a label element to create the hamburger menu. There were also a number of
                   checkbox hacks used to create menus and search areas. This was not ideal
                   especially for people using assistive technology.
                 </p>
@@ -324,7 +350,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After receiving
+                  pressing send to receiving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
@@ -345,8 +371,8 @@
                 <h4>How I changed it:</h4>
                 <p>
                   Using JavaScript I was able to create form validation that checked the user input.
-                  I created an event listener on focusout to tell the user imediatly if there was an
-                  error. This allowd them to fill in the form more easily as they could correct
+                  I created an event listener on focusout to tell the user immediately if there was an
+                  error. This allowed them to fill in the form more easily as they could correct
                   mistakes as they went through.
                 </p>
               </div>
@@ -383,15 +409,16 @@
               <div>
                 <h4>Why I changed it:</h4>
                 <p>
-                  The pictures in the exhibitions page were static I thought it would be nice if
-                  users could click on the images to see them full screen.
+                  The pictures on the product were static and dod not allow users to view the image
+                  larger, to see more details on the clothing.
                 </p>
                 <h4>How I changed it:</h4>
                 <p>
-                  I selected all the images on the page with .querySelectorAll(). I then used
-                  forEach() to add an event listener to each of the images. I added a class that
-                  would allow me to style the images to be full screen using CSS. I also added a
-                  small close button so it was clear to users how to close the modal.
+                  I added event handlers to the images that increased the scale of the image using
+                  transform scale(). This meant that when a user hovered over an image it zooms in.
+                  I then added another event listener for mouse move, which allows the user to pan
+                  over the image. To achieve the panning effect I simply offset the point where the
+                  image was transformed, using the x and y positions of the cursor.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -408,7 +435,7 @@
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
                   WordPress API. This not only helped with the search function but it also means if
-                  exhibitions needded updating or changing this could easily be done, without
+                  exhibitions needed updating or changing this could easily be done, without
                   needing to add any extra code.
                 </p>
               </div>
@@ -545,7 +572,7 @@
                   <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
                   the information from the contact form to the backend. I also added a small message
                   to tell the user when the message was being sent as there was a small delay from
-                  pressing send to recieving the confirmation from the backend. After receiving
+                  pressing send to receiving the confirmation from the backend. After receiving
                   response.ok from the server the sending message was removed and replaced with a
                   message sent confirmation.
                 </p>
@@ -629,7 +656,7 @@
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
                   WordPress API. This not only helped with the search function but it also means if
-                  exhibitions needded updating or changing this could easily be done, without
+                  exhibitions needed updating or changing this could easily be done, without
                   needing to add any extra code.
                 </p>
               </div>

@@ -14,17 +14,16 @@ let width = window.innerWidth;
 
 const checkPageWidth = () => {
   if (width <= 600) {
-    projOneButtons.forEach(button => {
-        button.classList.remove("selected");
-    })
-    projTwoButtons.forEach(button => {
-        button.classList.remove("selected");
-    })
-    projThreeButtons.forEach(button => {
-        button.classList.remove("selected");
-    })
-   
-  } 
+    projOneButtons.forEach((button) => {
+      button.classList.remove("selected");
+    });
+    projTwoButtons.forEach((button) => {
+      button.classList.remove("selected");
+    });
+    projThreeButtons.forEach((button) => {
+      button.classList.remove("selected");
+    });
+  }
 };
 
 checkPageWidth();
