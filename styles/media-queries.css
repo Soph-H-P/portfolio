@@ -39,6 +39,8 @@
 @media (min-width: 830px) {
   .information_container {
     grid-template-columns: 1fr 5fr;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .buttons_container {

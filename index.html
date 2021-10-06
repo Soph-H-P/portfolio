@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;400;700&family=Open+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <title>Portfolio SophHP</title>
   </head>
   <body>
@@ -36,26 +36,26 @@
         <div class="information_container">
           <div class="buttons_container">
             <h3>What I changed</h3>
-            <button class="proj-1_change-button change-button selected" id="">Buttons</button>
-            <button class="proj-1_change-button change-button" id="">Loading Indicator</button>
-            <button class="proj-1_change-button change-button" id="">Contact Form</button>
-            <button class="proj-1_change-button change-button" id="">Favicon</button>
-            <button class="proj-1_change-button change-button" id="">Search</button>
-            <button class="proj-1_change-button change-button" id="">Product Zoom</button>
-            <button class="proj-1_change-button change-button" id="">Cart Functionality</button>
-            <button class="proj-1_change-button change-button" id="">Products Page</button>
-            <button class="proj-1_change-button change-button" id="">Check-box Hacks</button>
+            <button class="proj-1_change-button change-button selected">Buttons</button>
+            <button class="proj-1_change-button change-button">Loading Indicator</button>
+            <button class="proj-1_change-button change-button">Contact Form</button>
+            <button class="proj-1_change-button change-button">Favicon</button>
+            <button class="proj-1_change-button change-button">Search</button>
+            <button class="proj-1_change-button change-button">Product Zoom</button>
+            <button class="proj-1_change-button change-button">Cart Functionality</button>
+            <button class="proj-1_change-button change-button">Products Page</button>
+            <button class="proj-1_change-button change-button">Check-box Hacks</button>
           </div>
 
           <ul class="list_container">
             <li class="proj-1_info-element visible">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the buttons:</h4>
                 <p>
                   On Chrome browsers the text inside the buttons were not centered. It was a
                   necessary visual and UI improvement.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the buttons:</h4>
                 <p>
                   Instead of using text align center I used align content center which solved the
                   problem.
@@ -69,13 +69,13 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the loading indicator:</h4>
                 <p>
                   When loading the products on the product page, there was no loading indicator.
                   This meant that users didn't know if there were no products to show or if they
                   were just waiting for products to load.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the loading indicator:</h4>
                 <p>
                   In the fetch function for the products page, I added a small loading indicator
                   which was removed after the request had been completed. As the site is called
@@ -92,22 +92,24 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the contact form:</h4>
                 <p>
                   The contact form didn't work, it didn't send the information anywhere, it was just
                   a hard coded link to a mock confirmation page. I wanted to be able to send emails
                   from there.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the contact form:</h4>
                 <p>
                   I created a headless WordPress installation, added the
-                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
-                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
-                  the information from the contact form to the backend. I also added a small message
-                  to tell the user when the message was being sent as there was a small delay from
-                  pressing send to receiving the confirmation from the backend. After receiving
-                  response.ok from the server the sending message was removed and replaced with a
-                  message sent confirmation.
+                  <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank"
+                    >Contact-Form-7 </a
+                  >and
+                  <a href="https://wordpress.org/plugins/flamingo/" target="_blank">Flamingo</a>
+                  plugins. I posted the information from the contact form to the backend. I also
+                  added a small message to tell the user when the message was being sent as there
+                  was a small delay from pressing send to receiving the confirmation from the
+                  backend. After receiving response.ok from the server the sending message was
+                  removed and replaced with a message sent confirmation.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -118,13 +120,13 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I added a favicon:</h4>
                 <p>
                   The website did not have a favicon visible at the tops of the pages. It is a nice
                   branding thing to have and is good for users to quickly recognise which tab they
                   are looking for.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I added a favicon:</h4>
                 <p>
                   I linked the favicon at the top of each HTML page giving it rel and type
                   attributes so the browser would know this was the icon to show in the tab.
@@ -138,12 +140,12 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the search function:</h4>
                 <p>
                   There was a search input in the header of every page but it didn't have any
                   functionality. To make this a useful feature I needed to make it work properly.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the search function:</h4>
                 <p>
                   Using the WooCommerce API endpoint for products, and adding a search query I was
                   able to display products matching the user input. To do this I created a function
@@ -160,12 +162,12 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I added image zoom:</h4>
                 <p>
                   The pictures in the exhibitions page were static I thought it would be nice if
                   users could click on the images to see them full screen.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I added image zoom:</h4>
                 <p>
                   I selected all the images on the page with .querySelectorAll(). I then used
                   forEach() to add an event listener to each of the images. I added a class that
@@ -181,9 +183,9 @@
 
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the cart functionality:</h4>
                 <p>To allow the user to remove items from the cart before checkout.</p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the cart functionality:</h4>
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
                   WordPress API. This not only helped with the search function but it also means if
@@ -198,20 +200,20 @@
             </li>
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the products page:</h4>
                 <p>
-                  I originally had one page for mens and womens that linked to the same JavaScript
+                  I originally had one page for men's and women's that linked to the same JavaScript
                   file and was a copy of all the same HTML. As you could filter gender on both the
                   pages anyway, the extra page was redundant. It could also get confusing when the
-                  title of the page was stating womens jackets and you had filtered to only show
+                  title of the page was stating women's jackets and you had filtered to only show
                   mens jackets.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the products page:</h4>
                 <p>
                   I removed both the pages and made one page for "Jackets" instead. This gives the
-                  ability to see mens or womens items using the filter. I then changed all the
+                  ability to see men's or women's items using the filter. I then changed all the
                   links, titles and breadcrumb links accordingly. I then added query strings when a
-                  user clicked on the mens or womens buttons on the home page. I used this to then
+                  user clicked on the men's or women's buttons on the home page. I used this to then
                   either check the correct filters and changed the page title to specify the gender
                   selected.
                 </p>
@@ -223,14 +225,14 @@
             </li>
             <li class="proj-1_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I removed the check-box hacks:</h4>
                 <p>
                   When the site was first made it was purely HTML and CSS. To make the menu, search
                   and basket open and close I originally used the checkbox hack. As this is not
                   really an ideal way to achieve this effect, semantically or for accessibility, it
                   needed to be changed.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I removed the check-box hacks:</h4>
                 <p>
                   I removed all the checkbox hacks from the site and replaced the functionality with
                   a small amount of JavaScript. Adding and removing a specific class that is styled
@@ -261,26 +263,26 @@
         <div class="information_container">
           <div class="buttons_container">
             <h3>What I changed</h3>
-            <button class="proj-2_change-button change-button selected" id="">Buttons</button>
-            <button class="proj-2_change-button change-button" id="">Scroll Behaviour</button>
-            <button class="proj-2_change-button change-button" id="">Semantics</button>
-            <button class="proj-2_change-button change-button" id="">Contact Form</button>
-            <button class="proj-2_change-button change-button" id="">Form Validation</button>
-            <button class="proj-2_change-button change-button" id="">Search</button>
-            <button class="proj-2_change-button change-button" id="">Picture Modal</button>
-            <button class="proj-2_change-button change-button" id="">Exhibitions</button>
-            <button class="proj-2_change-button change-button" id="">WCAG Check</button>
+            <button class="proj-2_change-button change-button selected">Buttons</button>
+            <button class="proj-2_change-button change-button">Scroll Behaviour</button>
+            <button class="proj-2_change-button change-button">Semantics</button>
+            <button class="proj-2_change-button change-button">Contact Form</button>
+            <button class="proj-2_change-button change-button">Form Validation</button>
+            <button class="proj-2_change-button change-button">Search</button>
+            <button class="proj-2_change-button change-button">Picture Modal</button>
+            <button class="proj-2_change-button change-button">Exhibitions</button>
+            <button class="proj-2_change-button change-button">WCAG Check</button>
           </div>
 
           <ul class="list_container">
             <li class="proj-2_info-element visible">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the buttons:</h4>
                 <p>
                   The buttons had an on hover effect that lifted the button upwards by 10px. This
                   caused a flickering effect if you hovered over the bottom of the button.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the buttons:</h4>
                 <p>
                   I changed the transform property from translatey() to use scale(). This removed
                   the flickering effect but still left the appearance of the button lifting off the
@@ -295,12 +297,12 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the scroll behaviour:</h4>
                 <p>
                   Some pages had links to take you to various sections of the page. The page hopped
                   instantly to the new place on the page, it wasn't very comfortable on the eyes.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the scroll behaviour:</h4>
                 <p>
                   I added a scroll-behaviour smooth to the whole document so the users can move from
                   place to place on a page in a more pleasant manner.
@@ -314,14 +316,14 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the semantics:</h4>
                 <p>
                   Some of the elements on the site were not very semantic. For example I had a div
                   inside a label element to create the hamburger menu. There were also a number of
                   checkbox hacks used to create menus and search areas. This was not ideal
                   especially for people using assistive technology.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the semantics:</h4>
                 <p>
                   When I originally coded this site I used purely HTML and CSS. By adding JavaScript
                   I was able to remove the need for checkbox hacks. This eliminated the problem of
@@ -337,22 +339,24 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the contact form:</h4>
                 <p>
                   The contact form didn't work, it didn't send the information anywhere, it was just
                   a hard coded link to a mock confirmation page. I wanted to be able to send emails
                   from there.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the contact form:</h4>
                 <p>
                   I created a headless WordPress installation, added the
-                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
-                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
-                  the information from the contact form to the backend. I also added a small message
-                  to tell the user when the message was being sent as there was a small delay from
-                  pressing send to receiving the confirmation from the backend. After receiving
-                  response.ok from the server the sending message was removed and replaced with a
-                  message sent confirmation.
+                  <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank"
+                    >Contact-Form-7 </a
+                  >and
+                  <a href="https://wordpress.org/plugins/flamingo/" target="_blank">Flamingo</a>
+                  plugins. I posted the information from the contact form to the backend. I also
+                  added a small message to tell the user when the message was being sent as there
+                  was a small delay from pressing send to receiving the confirmation from the
+                  backend. After receiving response.ok from the server the sending message was
+                  removed and replaced with a message sent confirmation.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -363,16 +367,16 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the form validation:</h4>
                 <p>
                   As I now had a form that was able to send I wanted to be able to validate the user
                   inputs before sending the information to make sure it was all correct.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the form validation:</h4>
                 <p>
                   Using JavaScript I was able to create form validation that checked the user input.
-                  I created an event listener on focusout to tell the user immediately if there was an
-                  error. This allowed them to fill in the form more easily as they could correct
+                  I created an event listener on focusout to tell the user immediately if there was
+                  an error. This allowed them to fill in the form more easily as they could correct
                   mistakes as they went through.
                 </p>
               </div>
@@ -384,12 +388,12 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the search function:</h4>
                 <p>
                   There was a search input in the header of every page but it didn't have any
                   functionality. To make this a useful feature I needed to make it work properly
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the search function:</h4>
                 <p>
                   I added the exhibitions to the WordPress database so I could then very easily use
                   the search endpoint from the WordPress API to display exhibitions matching the
@@ -407,12 +411,12 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the picture modal:</h4>
                 <p>
                   The pictures on the product were static and dod not allow users to view the image
                   larger, to see more details on the clothing.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the picture modal:</h4>
                 <p>
                   I added event handlers to the images that increased the scale of the image using
                   transform scale(). This meant that when a user hovered over an image it zooms in.
@@ -429,14 +433,14 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the exhibitions:</h4>
                 <p>To make the exhibitions easily editable and searchable.</p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the exhibitions:</h4>
                 <p>
                   Instead oh hard coding all the exhibitions in the HTML I populated them from the
                   WordPress API. This not only helped with the search function but it also means if
-                  exhibitions needed updating or changing this could easily be done, without
-                  needing to add any extra code.
+                  exhibitions needed updating or changing this could easily be done, without needing
+                  to add any extra code.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -447,14 +451,14 @@
 
             <li class="proj-2_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed things based on WCAG:</h4>
                 <p>
                   I found that some of the buttons lacked enough contrast to pass WCAG accessibility
                   tests. There were also a number of images without alt text, or with not very
                   useful alt text. I changed this to make the site more accessible to all different
                   types of user.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed things based on WCAG:</h4>
                 <p>
                   I checked through all images and ensured there was a descriptive alt text. I also
                   checked that all buttons and links had appropriate text and aria-labels where
@@ -472,7 +476,11 @@
       </section>
       <section class="project-section project-three">
         <h2>Project 3</h2>
-        <a class="project-link" href="bug-blog/" target="_blank">
+        <a
+          class="project-link"
+          href="https://portfolio-updates--where-bugs-unite.netlify.app/"
+          target="_blank"
+        >
           Exam 1 - Bug Blog
           <div class="product-preview">
             <img src="images/mac-bug.png" alt="" />
@@ -483,49 +491,32 @@
         <div class="information_container">
           <div class="buttons_container">
             <h3>What I changed</h3>
-            <button class="proj-3_change-button change-button selected" id="">Buttons</button>
-            <button class="proj-3_change-button change-button" id="">Scroll Behaviour</button>
-            <button class="proj-3_change-button change-button" id="">Semantics</button>
-            <button class="proj-3_change-button change-button" id="">Contact Form</button>
-            <button class="proj-3_change-button change-button" id="">Form Validation</button>
-            <button class="proj-3_change-button change-button" id="">Search</button>
-            <button class="proj-3_change-button change-button" id="">Picture Modal</button>
-            <button class="proj-3_change-button change-button" id="">Exhibitions</button>
-            <button class="proj-3_change-button change-button" id="">WCAG Check</button>
+            <button class="proj-3_change-button change-button selected">Sending Indicator</button>
+            <button class="proj-3_change-button change-button">Footer Design</button>
+            <button class="proj-3_change-button change-button">Line Height</button>
+            <button class="proj-3_change-button change-button">Random Post</button>
+            <button class="proj-3_change-button change-button">Filter Borders</button>
+            <button class="proj-3_change-button change-button">Click & Scroll</button>
+            <button class="proj-3_change-button change-button">Cleaned Code</button>
+            <button class="proj-3_change-button change-button">Social Media</button>
+            <button class="proj-3_change-button change-button">Loader style</button>
           </div>
 
           <ul class="list_container">
             <li class="proj-3_info-element visible">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed then sending indicator:</h4>
                 <p>
-                  The buttons had an on hover effect that lifted the button upwards by 10px. This
-                  caused a flickering effect if you hovered over the bottom of the button.
+                  I realised on sending the form that users hesitated and wondered why the form
+                  hadn't reset yet. I was displaying send before resetting the form that happened
+                  when the message had actually been sent. This was confusing to users.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the sending indicator:</h4>
                 <p>
-                  I changed the transform property from translatey() to use scale(). This removed
-                  the flickering effect but still left the appearance of the button lifting off the
-                  page.
-                </p>
-              </div>
-              <div class="modal-button-container">
-                <button class="proj-3_close-button">Close</button>
-                <button class="proj-3_next-button">Next</button>
-              </div>
-            </li>
-
-            <li class="proj-3_info-element">
-              <div>
-                <h4>Why I changed it:</h4>
-                <p>
-                  Some pages had links to take you to various sections of the page. The page hopped
-                  instantly to the new place on the page, it wasn't very comfortable on the eyes.
-                </p>
-                <h4>How I changed it:</h4>
-                <p>
-                  I added a scroll-behaviour smooth to the whole document so the users can move from
-                  place to place on a page in a more pleasant manner.
+                  I added the loader animation that I used on other pages and changed the text to
+                  display sending... this was a much clearer indicator to users what was currently
+                  going on. They could then wait to recieve a sending success message or failed if
+                  the message was unable to send.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -536,45 +527,19 @@
 
             <li class="proj-3_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed footer design:</h4>
                 <p>
-                  Some of the elements on the site were not very semantic. For example I had a div
-                  inside a label element to create the hanburger menu. There were also a number of
-                  checkbox hacks used to create menus and search areas. This was not ideal
-                  especially for people using assistive technology.
+                  I realised on larger screens users were missing the small links positioned to the
+                  far right. To help users find links and navigate easier it was necessary to
+                  position these more visibly.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the footer design:</h4>
                 <p>
-                  When I originally coded this site I used purely HTML and CSS. By adding JavaScript
-                  I was able to remove the need for checkbox hacks. This eliminated the problem of
-                  nesting div elements inside a label. I created a menu button element that added
-                  and removed class names to the menu.
-                </p>
-              </div>
-              <div class="modal-button-container">
-                <button class="proj-3_close-button">Close</button>
-                <button class="proj-3_next-button">Next</button>
-              </div>
-            </li>
-
-            <li class="proj-3_info-element">
-              <div>
-                <h4>Why I changed it:</h4>
-                <p>
-                  The contact form didn't work, it didn't send the information anywhere, it was just
-                  a hard coded link to a mock confirmation page. I wanted to be able to send emails
-                  from there.
-                </p>
-                <h4>How I changed it:</h4>
-                <p>
-                  I created a headless WordPress installation, added the
-                  <a href="https://wordpress.org/plugins/contact-form-7/">Contact-Form-7 </a>and
-                  <a href="https://wordpress.org/plugins/flamingo/">Flamingo</a> plugins. I posted
-                  the information from the contact form to the backend. I also added a small message
-                  to tell the user when the message was being sent as there was a small delay from
-                  pressing send to receiving the confirmation from the backend. After receiving
-                  response.ok from the server the sending message was removed and replaced with a
-                  message sent confirmation.
+                  I used display flex to position the links in the center of the footer and
+                  justified them with space between so they would be evenly spaced out. I also added
+                  a small dividing line to clearly separate the outside (social media links) from
+                  the links to other pages on the blog. I also added small separators between the
+                  links to separate them visually from one another.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -585,40 +550,17 @@
 
             <li class="proj-3_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed line height:</h4>
                 <p>
-                  As I now had a form that was able to send I wanted to be able to validate the user
-                  inputs before sending the information to make sure it was all correct.
+                  I noticed when reading longer blog posts it could be rather straining on the eyes.
+                  I therefore wanted to increase the line height to space out the lines a little.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed line height:</h4>
                 <p>
-                  Using JavaScript I was able to create form validation that checked the user input.
-                  I created an event listener on focusout to tell the user imediatly if there was an
-                  error. This allowd them to fill in the form more easily as they could correct
-                  mistakes as they went through.
-                </p>
-              </div>
-              <div class="modal-button-container">
-                <button class="proj-3_close-button">Close</button>
-                <button class="proj-3_next-button">Next</button>
-              </div>
-            </li>
-
-            <li class="proj-3_info-element">
-              <div>
-                <h4>Why I changed it:</h4>
-                <p>
-                  There was a search input in the header of every page but it didn't have any
-                  functionality. To make this a useful feature I needed to make it work properly
-                </p>
-                <h4>How I changed it:</h4>
-                <p>
-                  I added the exhibitions to the WordPress database so I could then very easily use
-                  the search endpoint from the WordPress API to display exhibitions matching the
-                  user input. To do this I created a function that added the users search as a query
-                  string. This then redirected the user to the exhibitions page. I took the query
-                  string and used this in the search endpoint to collect all exhibitions that
-                  matched the users search.
+                  Using line height property I increased the space between text. I realised however
+                  that some blocks of text were very spread out and others crammed together. I found
+                  that I could set line height as a percentage which fixed the problem, and spaced
+                  text nicely.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -629,35 +571,25 @@
 
             <li class="proj-3_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed the view post button:</h4>
                 <p>
-                  The pictures in the exhibitions page were static I thought it would be nice if
-                  users could click on the images to see them full screen.
+                  In my original design I had placed a button on the about page that would take the
+                  user to a random blog post. I had been unable to achieve this in the original
+                  project so I wanted to add this feature.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed the view posts button:</h4>
                 <p>
-                  I selected all the images on the page with .querySelectorAll(). I then used
-                  forEach() to add an event listener to each of the images. I added a class that
-                  would allow me to style the images to be full screen using CSS. I also added a
-                  small close button so it was clear to users how to close the modal.
-                </p>
-              </div>
-              <div class="modal-button-container">
-                <button class="proj-3_close-button">Close</button>
-                <button class="proj-3_next-button">Next</button>
-              </div>
-            </li>
-
-            <li class="proj-3_info-element">
-              <div>
-                <h4>Why I changed it:</h4>
-                <p>To make the exhibitions easily editable and searchable.</p>
-                <h4>How I changed it:</h4>
-                <p>
-                  Instead oh hard coding all the exhibitions in the HTML I populated them from the
-                  WordPress API. This not only helped with the search function but it also means if
-                  exhibitions needed updating or changing this could easily be done, without
-                  needing to add any extra code.
+                  I added the following plugin:
+                  <a
+                    href="https://felipeelia.dev/wordpress-rest-api-enable-random-order-of-posts-list/"
+                    target="_blank"
+                    >"Enable Random Order of Posts List"</a
+                  >
+                  to the plugin folder of my wordpress site. This added an endpoint that would fetch
+                  posts in a totally random order. By fetching just one post at a time I was then
+                  able to collect a random post id. Using an on click event listener I sent the user
+                  to the blog post page with the random id. If there was an error in the fetch
+                  request I then linked the user to a specific blog post page.
                 </p>
               </div>
               <div class="modal-button-container">
@@ -668,19 +600,110 @@
 
             <li class="proj-3_info-element">
               <div>
-                <h4>Why I changed it:</h4>
+                <h4>Why I changed selected filter button styling:</h4>
                 <p>
-                  I found that some of the buttons lacked enough contrast to pass WCAG accessibility
-                  tests. There were also a number of images without alt text, or with not very
-                  useful alt text. I changed this to make the site more accessible to all different
-                  types of user.
+                  Users were finding it difficult to tell which filters were chosen, especially
+                  where the buttons were darker in colour.
                 </p>
-                <h4>How I changed it:</h4>
+                <h4>How I changed selected filter button styling:</h4>
                 <p>
-                  I checked through all images and ensured there was a descriptive alt text. I also
-                  checked that all buttons and links had appropriate text and aria-labels where
-                  necessary. I also thoroughly checked the contrast of the different elements on the
-                  site to ensure they would be readable for everyone.
+                  In the in the on click event handler, I changed the colours of each of the filter
+                  buttons borders. I chose colours that contrasted well. For accessibility I also
+                  added an underline to the filter that had been chosen. This made it much more
+                  obvious at a quick glance.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed the scroll function in the carousel:</h4>
+                <p>
+                  Users were required to click many times to scroll from one end of the carousel to
+                  another. I noticed from the HotJar recordings that some users were clicking and
+                  holding to scroll. I thought this would be a nice feature as it would save users
+                  some clicks.
+                </p>
+                <h4>How I changed the scroll function the carousel:</h4>
+                <p>
+                  Instead of the on click event listener I added a mouse up and down for each arrow
+                  on the carousel. This allowed me to set a variable as pressed or not pressed. I
+                  then used setInterval() to increase or decrease the scroll position depending on
+                  which arrow is pressed. I got a user to test this and adjusted the speed so it
+                  felt comfortable to scroll, not too slow or fast. I added a clearInterval function
+                  when a user removed the mouse from the arrow or stopped clicking. Now a user can
+                  scroll with click and click and press.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I cleaned up the code:</h4>
+                <p>
+                  I realised that to render the carousel there was a large amount of duplicated
+                  code. This is not very good practice and needed to be cleaned up.
+                </p>
+                <h4>How I cleaned up the code:</h4>
+                <p>
+                  I took the variables for selecting the carousel components and moved this and the
+                  event listeners to the script.js page. This allowed me to delete 414 lines of code
+                  in total.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed the social media links:</h4>
+                <p>
+                  The social media icons in the footer linked to the respective websites but didn't
+                  have the functionality to share the blog website which is what I had originally
+                  intended. I therefore wanted to add this feature. I had also originally linked
+                  Instagram and Snapchat in the footer but realised these platforms are better for
+                  sharing photos not websites.
+                </p>
+                <h4>How I changed the social media links:</h4>
+                <p>
+                  Firstly I changed Instagram and Snapchat to LinkedIn and Pinterest, places where
+                  people more commonly share websites. I then used
+                  <a href="https://curiosum.com/tools/social-share-links-generator" target="_blank"
+                    >Curiosum</a
+                  >
+                  to generate social media share links for my website.
+                </p>
+              </div>
+              <div class="modal-button-container">
+                <button class="proj-3_close-button">Close</button>
+                <button class="proj-3_next-button">Next</button>
+              </div>
+            </li>
+
+            <li class="proj-3_info-element">
+              <div>
+                <h4>Why I changed the loader styling:</h4>
+                <p>
+                  I found that after I had increased the size of the blog post previews for larger
+                  screens I had failed to increase the size of the loading animation. This caused
+                  there to be an unsightly white band down the right hand side during loading.
+                </p>
+                <h4>How I changed the loader styling:</h4>
+                <p>
+                  I changed the width of the loader to be 100% so it filled the preview box. I then
+                  changed the animation from % to px so the magnifying glass would still be in time
+                  with the bug.
                 </p>
               </div>
               <div class="modal-button-container">
