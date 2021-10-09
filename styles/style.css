@@ -43,7 +43,7 @@ header {
   min-height: 50vh;
   position: relative;
   background-image: url("../images/desk.jpg");
-  background-position: bottom;
+  background-position: right 50% bottom 5%;
   background-size: cover;
   background-blend-mode: saturation;
   color: var(--light-font-color);
@@ -261,31 +261,6 @@ header p {
   justify-content: space-around;
 }
 
-.proj-1_next-button::after,
-.proj-2_next-button::after,
-.proj-3_next-button::after,
-.proj-1_close-button::after,
-.proj-2_close-button::after,
-.proj-3_close-button::after {
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  background: var(--light-font-color);
-  padding: 5px 8px;
-  border-radius: 50%;
-}
-
-.proj-1_next-button::after,
-.proj-2_next-button::after,
-.proj-3_next-button::after {
-  content: "👉";
-}
-
-.proj-1_close-button::after,
-.proj-2_close-button::after,
-.proj-3_close-button::after {
-  content: "🙅";
-}
-
 .proj-1_next-button,
 .proj-2_next-button,
 .proj-3_next-button,
@@ -293,8 +268,8 @@ header p {
 .proj-2_close-button,
 .proj-3_close-button {
   background: none;
-  padding: 8px;
-  font-size: 1.1rem;
+  padding: 10px 40px;
+  font-size: 1.3rem;
   cursor: pointer;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -330,4 +305,50 @@ header p {
 .proj-3_next-button {
   border: solid 1px var(--color-2);
   background-color: var(--color-2);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: var(--dark-font-color);
+  color: var(--light-font-color);
+}
+
+footer p {
+  margin: 0;
+}
+
+.me-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 250px;
+}
+
+.me-container h3,
+.me-container p {
+  margin: 0;
+}
+
+.me-container > p {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.me-container img {
+  width: 70px; 
+}
+
+.github-link {
+  text-decoration: none;
+  background-color: var(--light-font-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.github-link:hover {
+  background-color: var(--dark-font-color);
+  color: var(--light-font-color);
 }

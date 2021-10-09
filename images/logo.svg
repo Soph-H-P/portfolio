@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="352" height="352" viewBox="0 0 352 352">
+  <g id="Group_2" data-name="Group 2" transform="translate(-74 -74)">
+    <g id="Group_1" data-name="Group 1">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="352" height="352" rx="43" transform="translate(74 74)"/>
+      <path id="Icon_material-computer" data-name="Icon material-computer" d="M227.809,165.466a22.751,22.751,0,0,0,22.667-22.781l.114-113.9A22.848,22.848,0,0,0,227.809,6H45.562A22.848,22.848,0,0,0,22.781,28.781v113.9a22.848,22.848,0,0,0,22.781,22.781H0v13.513H273.371V165.466ZM38.875,20.659H235.513V150.075H38.875Z" transform="translate(113.314 152.876)" fill="#fff"/>
+      <text id="SH" transform="translate(179 273)" fill="#fff" font-size="102" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">SH</tspan></text>
+    </g>
+  </g>
+</svg>
